@@ -1,0 +1,33 @@
+<html>
+    <head>
+       
+        <style>
+            div {
+             margin-top: 1000px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="pasta2.jpeg">
+        <div>
+            <h1>I love pasta</h1>
+        </div>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script> 
+
+        <script>
+            $(document).ready(() => {
+            const pictureBox = $('img');
+            const messageBox = $('div');
+
+            pictureBox.click(function() {
+                $('html, body').animate({
+                    scrollTop: messageBox.offset().top
+                    }, 2000);
+                })
+            })
+        </script>
+    </body>
+</html>
